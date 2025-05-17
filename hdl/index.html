@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="https://img.icons8.com/ios-filled/50/f0f0f0/fingerprint.png" alt="Fingerprint">
+    <h1>VOTING SYSTEM</h1>
+  </header>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="vote-icon">
+        <img src="icon-removebg-preview.png" alt="Vote Icon">
+        <p>Please vote wisely</p>
+      </div>
+
+      <div class="candidates-wrapper">
+        <div class="candidates-title">CANDIDATES</div>
+
+        <div class="candidate" onclick="vote('Jane Doe')">
+          <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Jane Doe">
+          <div class="candidate-info">
+            <div class="candidate-name">Jane Doe</div>
+            <div class="candidate-party">XY and AB Partylist</div>
+          </div>
+        </div>
+
+        <div class="candidate" onclick="vote('John Doe')">
+          <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Doe">
+          <div class="candidate-info">
+            <div class="candidate-name">John Doe</div>
+            <div class="candidate-party">Monogamy Partylist</div>
+          </div>
+        </div>
+
+        <div class="candidate" onclick="vote('William Angelbert von DeMarc')">
+          <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="William Angelbert von DeMarc">
+          <div class="candidate-info">
+            <div class="candidate-name">William Angelbert von DeMarc</div>
+            <div class="candidate-party">Independent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function vote(name) {
+      const confirmed = confirm(`Are you sure you want to vote for ${name}?`);
+      if (confirmed) {
+        alert(`✅ Your vote for ${name} has been recorded. Thank you!`);
+      }
+    }
+  </script>
+</body>
+</html>
